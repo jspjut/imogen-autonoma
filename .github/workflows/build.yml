@@ -31,6 +31,6 @@ jobs:
       #     github_token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Deploy to Github Pages
-        uses: actions/upload-pages-artifact
+        uses: actions/upload-pages-artifact@v1.0.8
         with: 
           path: _site/
