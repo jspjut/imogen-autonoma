@@ -30,7 +30,10 @@ jobs:
       #     publish_dir: ./_site
       #     github_token: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Deploy to Github Pages
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v1.0.8
         with: 
           path: _site/
+      
+      - name: Deploy Pages
+        uses: actions/deploy-pages@v2.0.0
