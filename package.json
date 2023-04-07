@@ -1,18 +1,19 @@
 {
   "name": "imogen-autonoma",
   "version": "1.0.0",
-  "description": "",
+  "description": "Imogen Autonoma writing website",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "npx @11ty/eleventy",
+    "build": "env NODE_ENV=production npx @11ty/eleventy --pathprefix 'imogen-autonoma'",
     "serve": "npx @11ty/eleventy --serve",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "env DEBUG=Eleventy* npx eleventy"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Josef Spjut",
+  "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "moment": "^2.29.4"
   }
 }

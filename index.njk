@@ -1,0 +1,20 @@
+---
+layout: base-layout.njk
+---
+{% for story in collections.short %}
+  <article>
+
+    <h1>
+      <a href="{{ story.url | url }}">{{ story.data.title }}</a>
+    </h1>
+
+    <time datetime="{{ story.date | dateIso }}">{{ story.date | dateReadable }}</time>
+
+    {% excerpt story %}
+
+    <a href="{{ story.url | url }}">Read more</a>
+
+  </article>
+{% endfor %}
+
+Test
